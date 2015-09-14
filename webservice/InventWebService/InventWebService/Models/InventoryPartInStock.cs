@@ -11,10 +11,10 @@ namespace InventWebService.Models
     {
         public InventoryPartInStock()
         { }
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
-        public string part_no { get; set; }
+        //[BsonId]
+        //[BsonRepresentation(BsonType.ObjectId)]
+        //public string Id { get; set; }
+        //public string part_no { get; set; }
         public string serial_no { get; set; }
         public DateTime manuf_date { get; set; }
         public DateTime expiary_date { get; set; }
@@ -22,6 +22,6 @@ namespace InventWebService.Models
         public int quantity { set; get; }
 
 
-        public virtual InventoryPart InventPart { get; set; }
+       // public virtual InventoryPart InventPart { get; set; }
     }
 }

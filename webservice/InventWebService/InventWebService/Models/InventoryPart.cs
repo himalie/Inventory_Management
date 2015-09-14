@@ -14,11 +14,11 @@ namespace InventWebService.Models
        
         public InventoryPart()
         {
-            this.InvPartInStock = new HashSet<InventoryPartInStock>();
+            this.InvPartInStock = new List<InventoryPartInStock>();
         }
         public InventoryPart(InventoryPart part)
         {
-            this.InvPartInStock = new HashSet<InventoryPartInStock>();
+            this.InvPartInStock = new List<InventoryPartInStock>();
         }
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
@@ -27,6 +27,6 @@ namespace InventWebService.Models
         public string part_no { get;set; }
         public string description {get; set;}        
 
-        public virtual ICollection<InventoryPartInStock> InvPartInStock { get; set; }
+        public virtual List<InventoryPartInStock> InvPartInStock { get; set; }
     }
 }
